@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="Upload Assignments"
+        android:id="@+id/menu_subjects"
+        android:checkable="true"
+        android:icon="@drawable/outline_import_contacts_black_24dp"
+        />
+
+    <!--item
+        android:title="My Profile"
+        android:id="@+id/menu_account"
+        android:checkable="true"
+        android:icon="@drawable/profile_icon"
+        /-->
+    <item
+        android:title="Log Out"
+        android:id="@+id/log_out"
+        android:checkable="true"
+        android:icon="@drawable/settings_icon"
+        />
+
+
+</menu>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubjectsActivity"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/active_assignment_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:textStyle="normal"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/file_chosen_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="60dp"
+        android:textStyle="normal"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+
+    <Button
+        android:id="@+id/choose_file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Choose your file"
+        android:background="@drawable/button_background"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/upload_file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Upload file"
+        android:background="@drawable/button_background"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/view_file_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="View your file ->"
+        android:background="@drawable/button_background"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        />
+
+
+
+
+</LinearLayout>

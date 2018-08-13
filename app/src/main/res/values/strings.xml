@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CoE-Docket</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="file_provider_authority" translatable="false"> com.example.sujit.docpoint.fileprovider</string>
+
+</resources>
