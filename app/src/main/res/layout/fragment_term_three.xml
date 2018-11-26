@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/scrollView"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".termThreeFragment">
 
@@ -12,6 +14,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="5dp">
+        <include layout="@layout/material_view_pager_placeholder"/>
 
             <android.support.v7.widget.CardView
                 android:tag="subject1"
@@ -192,4 +195,4 @@
 
 
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>

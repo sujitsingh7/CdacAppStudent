@@ -4,10 +4,14 @@ package com.example.sujit.docpoint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +37,7 @@ public class termOneFragment extends Fragment {
 
     TextView oneTextView,twoTextView,threeTextView,fourTextView,fiveTextView,sixTextView;
     CardView oneCardView,twoCardView,threeCardView,fourCardView,fiveCardView,sixCardView;
+    NestedScrollView mScrollView;
 
     SharedPreferences sharedPreferences;
 
@@ -74,19 +80,32 @@ public class termOneFragment extends Fragment {
         fiveCardView = v.findViewById(R.id.cardview5);
         sixCardView = v.findViewById(R.id.cardview6);
 
+        mScrollView=v.findViewById(R.id.scrollView);
 
+
+//        AssetManager am =  this.getApplicationContext(). getAssets();
+//
+//        Typeface customfont = Typeface.
+
+        Typeface typeface = ResourcesCompat.getFont(getActivity(), R.font.fredrickathegreat);
 
         oneTextView.setText("IT Infrastructure");
+        oneTextView.setTypeface(typeface);
 
         twoTextView.setText("Object Oriented Programming concepts");
+      twoTextView.setTypeface(typeface);
 
         threeTextView.setText("Linux OS Administration");
+        threeTextView.setTypeface(typeface);
 
         fourTextView.setText("Web Technology");
+        fourTextView.setTypeface(typeface);
 
         fiveTextView.setText("Effective Communication");
+        fiveTextView.setTypeface(typeface);
 
         sixTextView.setText("project");
+        sixTextView.setTypeface(typeface);
 
         mCurrentUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -94,9 +113,12 @@ public class termOneFragment extends Fragment {
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
 
+        MaterialViewPagerHelper.registerScrollView(getActivity(), mScrollView);
 
 
-       // subjectsDatabase =SQLiteDatabase.openOrCreateDatabase("Subjects",null);
+
+
+        // subjectsDatabase =SQLiteDatabase.openOrCreateDatabase("Subjects",null);
        // subjectsDatabase.execSQL("CREATE TABLE IF NOT EXISTS term1(id INT(2),name VARCHAR)");
 
 

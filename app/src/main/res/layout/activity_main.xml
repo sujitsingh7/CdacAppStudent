@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/shape">
+    tools:context=".MainActivity">
+   <!-- android:background="@drawable/shape"-->
 
+    <!--
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -30,6 +31,38 @@
 
 
 </LinearLayout>
+
+-->
+
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/kenburneffect"/>
+
+    <ImageView
+        android:id="@+id/splashimage"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="236dp"
+        android:src="@drawable/splashimage" />
+
+    <TextView
+      android:id="@+id/splashTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="187dp"
+        android:fontFamily="serif-monospace"
+        android:text="  Welcome to CoE-Docket"
+        android:layout_centerInParent="true"
+        android:textStyle="normal"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:alpha="0"/>
 
 
 

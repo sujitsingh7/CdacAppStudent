@@ -1,6 +1,7 @@
 package com.example.sujit.docpoint;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -78,6 +79,8 @@ public class StudyMaterialActivity extends AppCompatActivity {
     private FirebaseRecyclerOptions<Files> options;
     private Query query;
 
+    int progresspercentage;
+
 
     ProgressDialog progressDialog;
     String term,batch,subject,subject_name;
@@ -96,6 +99,7 @@ public class StudyMaterialActivity extends AppCompatActivity {
         subject = getIntent().getStringExtra("subject");
         subject_name = getIntent().getStringExtra("subject_name");
 
+        getSupportActionBar().setTitle(subject_name);
 
 
         Log.i("term",term);
@@ -190,6 +194,10 @@ public class StudyMaterialActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(View v) {
 
+                                        progresspercentage=0;
+
+
+
                                         StorageReference httpsReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.getUrl());
 
 
@@ -257,8 +265,12 @@ public class StudyMaterialActivity extends AppCompatActivity {
                                                     @Override
                                                     public void onProgress(FileDownloadTask.TaskSnapshot taskSnapshot) {
 
+
+                                                        progressDialog.setProgress(0);
+
                                                         progressDialog.show();
-                                                        int progresspercentage = (int) ((int)(100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount());
+                                                        Log.i("bytes transferred",String.valueOf(taskSnapshot.getBytesTransferred()));
+                                                        progresspercentage = (int) ((int)(100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount());
                                                         progressDialog.incrementProgressBy(progresspercentage);
 
                                                     }

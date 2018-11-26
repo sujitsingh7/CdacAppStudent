@@ -4,9 +4,12 @@ package com.example.sujit.docpoint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,6 +45,7 @@ public class termTwoFragment extends Fragment {
 
     String status;
     Intent intent;
+    NestedScrollView mScrollView;
 
 
     public termTwoFragment() {
@@ -75,6 +80,8 @@ public class termTwoFragment extends Fragment {
         fiveCardView = v.findViewById(R.id.cardview5);
         sixCardView=v.findViewById(R.id.cardview6);
 
+        Typeface typeface = ResourcesCompat.getFont(getActivity(), R.font.fredrickathegreat);
+
         oneTextView.setText("Hadoop Ecosystem");
 
         twoTextView.setText("J2EE - Enterprise Java");
@@ -87,6 +94,19 @@ public class termTwoFragment extends Fragment {
 
         sixTextView.setText("project");
 
+
+        oneTextView.setTypeface(typeface);
+        twoTextView.setTypeface(typeface);
+        threeTextView.setTypeface(typeface);
+        fourTextView.setTypeface(typeface);
+        fiveTextView.setTypeface(typeface);
+        sixTextView.setTypeface(typeface);
+
+
+
+        mScrollView=v.findViewById(R.id.scrollView);
+
+        MaterialViewPagerHelper.registerScrollView(getActivity(), mScrollView);
 
       /*  sharedPreferences2 = getActivity().getSharedPreferences("com.example.sujit.documentportal", Context.MODE_PRIVATE);
 

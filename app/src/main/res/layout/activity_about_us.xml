@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs"
+    android:fitsSystemWindows="true">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleGravity="bottom|center_horizontal"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:id="@+id/info_profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:src="@drawable/kenburneffect"
+                />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/about_us_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleTextColor="@color/drawerArrowColor"
+                />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/drawerArrowColor">
+
+
+                <TextView
+                    android:id="@+id/desc_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/drawerArrowColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="20dp"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/black"
+                    android:text=" Developer"
+                    android:gravity="center_vertical"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/developer"
+                        android:layout_marginLeft="15dp" />
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="20dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:text="Sujit Singh"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="14dp"
+                            android:fontFamily="casual"
+                            android:textColor="@android:color/holo_blue_bright"
+                            android:text="iamsinghsujit@gmail.com"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/developer_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="18dp"
+                    android:padding="1dp"
+                    android:textStyle="normal"
+                    android:textSize="15dp"
+                    android:fontFamily="serif-monospace"
+                    android:textColor="@android:color/black"
+
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/drawerArrowColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="20dp"
+                    android:fontFamily="monospace"
+                    android:textColor="@android:color/black"
+                    android:text=" Mentor"
+                    android:gravity="center_vertical"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/mentor"
+                        android:layout_marginLeft="15dp" />
+
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="20dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:text="Mr. Saket Jha"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="14dp"
+                        android:fontFamily="casual"
+                        android:textColor="@android:color/holo_blue_bright"
+                        android:text="Project Manager (Commerce)\nCDAC"
+                        android:gravity="center_vertical"
+                        android:textStyle="bold"
+                        />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/mentor_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:padding="1dp"
+                    android:textStyle="normal"
+                    android:textSize="15dp"
+                    android:fontFamily="serif-monospace"
+                    android:textColor="@android:color/black"
+
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <!--
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:fontFamily="monospace"
+                android:textColor="@android:color/black"
+                android:text="Your feedback is valueable.\n Do write us one."
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/feedbackEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:drawableStart="@drawable/ic_prn"
+                android:layout_gravity="center_horizontal"
+                android:hint="  Write your feedback"
+                android:maxLength="12"
+                android:inputType="text|number"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="35dp"
+
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/border_fields"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+             -->
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs"
+    android:background="@drawable/kenburneffect"
+    android:alpha="1">
+
+
+
+    <RelativeLayout
+        android:elevation="10dp"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="450dp"
+        android:background="#FFFFFF"
+        android:alpha="0.6">
+
+
+
+        <TextView
+            android:padding="5dp"
+            android:alpha="1"
+            android:id="@+id/heading_text_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="22dp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:text="  CoE-Docket"
+            android:elevation="20dp"/>
+
+        <View
+            android:padding="5dp"
+            android:alpha="1"
+            android:elevation="20dp"
+            android:layout_width="200dp"
+            android:layout_height="0.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:background="@android:color/holo_orange_dark"/>
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:elevation="20dp"
+            android:alpha="1"
+            android:id="@+id/desc_text_view"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="normal"
+            android:textColor="@android:color/black"
+            android:fontFamily="serif-monospace"
+            />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+-->

@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#F57C00</color>
     <color name="colorAccent">#000000</color>
     <color name="tabIndicatorColor">#F57C00</color>
+
+    <color name="statusBarColor">@color/blue</color>
+    <color name="navigationBarColor">@android:color/black</color>
+    <color name="drawerArrowColor">@android:color/white</color>
+    <color name="backgroundColor">#dddcdb</color>
 </resources>

@@ -1,9 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyProfileActivity">
+    tools:context=".MyProfileActivity"
+    android:foreground="?android:attr/selectableItemBackground">
+<LinearLayout
+    android:padding="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFBFBFB"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true">
 
-</android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="Profile"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:layout_gravity="center"/>
+
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="Username"
+        android:textSize="17dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/userNameCardView"
+        android:elevation="0dp">
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userNameTextView"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:textColor="@android:color/holo_orange_dark"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:id="@+id/editUserNameButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_prn" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:text="Email"
+        android:textSize="17dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/emailCardView"
+        android:elevation="0dp">
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailTextView"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:fontFamily="casual"
+                android:textColor="@android:color/holo_orange_dark"
+
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/editEmailButton"
+                android:layout_marginRight="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_prn" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:id="@+id/batchCardView"
+        android:background="#FFFFFF">
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prn Number"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="serif-monospace"/>
+                <TextView
+                    android:id="@+id/prnTextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/holo_orange_dark"/>
+
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/darker_gray"/>
+
+
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Batch"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="serif-monospace"/>
+                <TextView
+                    android:id="@+id/batchTextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    />
+
+                <View
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Term"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="serif-monospace"/>
+                <TextView
+                    android:id="@+id/termTextView"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/holo_orange_dark"
+                    />
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+       android:layout_gravity="center_vertical"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:padding="5dp"
+
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/changePasswordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:text="Change Password"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="27dp"/>
+
+            <TextView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/verifyEmailTextView"
+                android:padding="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="monospace"
+                android:text="Verify Email"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="14dp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+</RelativeLayout>

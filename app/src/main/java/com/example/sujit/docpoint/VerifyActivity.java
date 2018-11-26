@@ -38,6 +38,9 @@ public class VerifyActivity extends AppCompatActivity {
         type = getIntent().getStringExtra("type");
 
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         listView = findViewById(R.id.list_view);
         arrayList=new ArrayList();
         arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);

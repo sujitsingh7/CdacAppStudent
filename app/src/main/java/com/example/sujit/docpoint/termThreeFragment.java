@@ -4,9 +4,12 @@ package com.example.sujit.docpoint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,6 +46,8 @@ public class termThreeFragment extends Fragment {
     String status;
     Intent intent;
 
+    NestedScrollView mScrollView;
+
 
     public termThreeFragment() {
         // Required empty public constructor
@@ -58,6 +64,8 @@ public class termThreeFragment extends Fragment {
         mCurrentUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference();
+
+        Typeface typeface = ResourcesCompat.getFont(getActivity(), R.font.fredrickathegreat);
 
 
        // sharedPreferences3 = getActivity().getSharedPreferences("com.example.sujit.documentportal", Context.MODE_PRIVATE);
@@ -94,6 +102,18 @@ public class termThreeFragment extends Fragment {
 
         sevenTextView.setText("Mobile Communications");
 
+        mScrollView=v.findViewById(R.id.scrollView);
+
+        oneTextView.setTypeface(typeface);
+        twoTextView.setTypeface(typeface);
+        threeTextView.setTypeface(typeface);
+        fourTextView.setTypeface(typeface);
+        fiveTextView.setTypeface(typeface);
+        sixTextView.setTypeface(typeface);
+        sevenTextView.setTypeface(typeface);
+
+
+        MaterialViewPagerHelper.registerScrollView(getActivity(), mScrollView);
 
 
 
@@ -242,6 +262,12 @@ public class termThreeFragment extends Fragment {
             }
         });
         sixCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClicked(v);
+            }
+        });
+        sevenCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onClicked(v);

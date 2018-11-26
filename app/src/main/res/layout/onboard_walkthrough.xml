@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1"
+    android:background="@drawable/kenburneffect">
+    
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="450dp"
+        android:background="#FFFFFF"
+        android:alpha="0.6">
+
+        <TextView
+            android:padding="5dp"
+            android:alpha="1"
+            android:id="@+id/heading_text_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="22dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:fontFamily="serif-monospace"
+            android:textStyle="bold"
+            android:text=""
+            android:elevation="20dp"/>
+
+        <View
+            android:padding="5dp"
+            android:alpha="1"
+            android:elevation="20dp"
+            android:layout_width="200dp"
+            android:layout_height="0.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:background="@android:color/holo_orange_dark"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+
+            android:id="@+id/desc_text_view"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="153dp"
+            android:alpha="1"
+            android:elevation="20dp"
+            android:fontFamily="serif-monospace"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

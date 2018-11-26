@@ -43,6 +43,9 @@ public class DownloadsActivity extends AppCompatActivity {
         listView.setAdapter(arrayAdapter);
 
 
+        getSupportActionBar().setTitle("Study Materials");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         Map<String,?> entries = downloadSharedPreferences.getAll();
         Set<String> keys = entries.keySet();
         for (String key : keys) {

@@ -8,10 +8,8 @@
     tools:context=".HomeScreenActivity"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+
+        <!--
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -24,7 +22,6 @@
                 android:layout_gravity="start"
                 />
 
-            />
 
 
             <android.support.design.widget.TabLayout
@@ -36,13 +33,44 @@
             </android.support.design.widget.TabLayout>
 
         </android.support.design.widget.AppBarLayout>
+        -->
 
+
+
+
+<!--
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
+
         </android.support.v4.view.ViewPager>
-    </LinearLayout>
+
+        -->
+
+<!--material viewpager added -->
+        <com.github.florent37.materialviewpager.MaterialViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:viewpager_color="@color/colorPrimary"
+            app:viewpager_pagerTitleStrip="@layout/my_tab"
+            app:viewpager_headerHeight="200dp"
+            app:viewpager_headerAlpha="1.0"
+            app:viewpager_header="@layout/myheader"
+            app:viewpager_hideLogoWithFade="false"
+            app:viewpager_hideToolbarAndTitle="true"
+            app:viewpager_enableToolbarElevation="true"
+            app:viewpager_parallaxHeaderFactor="1.5"
+            app:viewpager_headerAdditionalHeight="20dp"
+            app:viewpager_displayToolbarWhenSwipe="true"
+            app:viewpager_transparentToolbar="true"
+            app:viewpager_animatedHeaderImage="true"
+            app:viewpager_disableToolbar="false"
+            />
+
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_drawer"
@@ -51,6 +79,7 @@
         android:layout_gravity="start"
         app:itemTextColor="@android:color/holo_blue_light"
         app:menu="@menu/menu_items"
+        android:fitsSystemWindows="true"
         app:headerLayout="@layout/navigation_header">
 
 

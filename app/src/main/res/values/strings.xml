@@ -4,4 +4,10 @@
     <string name="close">Close</string>
     <string name="file_provider_authority" translatable="false"> com.example.sujit.docpoint.fileprovider</string>
 
+    <string name="aboutus">CoE-Docket is a platform meant exclusively for the students of CDAC Center of Excellence,CVRCE.The application allows to submit assignments from anywhere inside college campus within the allowed time domain.
+    Students can download study  material for different modules.Also it gives provision to view attendance,result,schedule for different modules as when updated by the admin.  </string>
+
+    <string name="mentor">A tech-savyy teacher,mentor,coordinator,a true guide and what not!His vision has been instrumental in the completion of CoE-Docket.</string>
+    <string name="developer"> An inquisitive tech-geek.CoE-Docket is an upshot of his pre-eminent endeavour.  </string>
+
 </resources>

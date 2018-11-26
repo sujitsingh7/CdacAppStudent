@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="210dp"
-    android:background="@drawable/header_one">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@drawable/custom_nav_header"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
 
-</RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/black"
+        android:text="Hello"
+        android:textStyle="normal"
+        android:fontFamily="serif"/>
+
+    <TextView
+        android:id="@+id/name_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="serif"
+        android:text=""
+        />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/email_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:padding="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@android:color/black"
+        android:text=""/>
+
+</LinearLayout>
