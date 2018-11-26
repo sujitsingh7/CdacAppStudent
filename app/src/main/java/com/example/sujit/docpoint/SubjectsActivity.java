@@ -133,9 +133,6 @@ public class SubjectsActivity extends AppCompatActivity {
 
         //urls of assignmnet submission server -->
 
-         URL="http://172.29.5.9:8090/fileupload.php";
-        urlForDB="http://172.29.5.9:8090/uploadintodb.php";
-        urlForDate="http://172.29.5.9:8090/date.php";
 
 
 //        // url for my pc -->

@@ -59,7 +59,7 @@ public class VerifyActivity extends AppCompatActivity {
                 OkHttpClient client = new OkHttpClient();
                 Request request = null;
                 try {
-                    request = new Request.Builder().url("http://172.29.5.9:8090/verify.php?location="+ URLEncoder.encode(location, "UTF-8")).build();
+                    request = new Request.Builder().url("http://192.168.73.108/verify.php?location="+ URLEncoder.encode(location, "UTF-8")).build();
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
